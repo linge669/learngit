@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>昙花旅行日记</title>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/asidenav.css"/>
+     	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">	
+     	<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+     	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/tagcloud.js" type="text/javascript" charset="utf-8"></script>
+	 	
+	</head>
+	<body>
+		<!--header部分-->
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<nav id="myHead" class="navbar navbar-default">
+						  <div class="container-fluid" style="height: 80px;">
+						    <div class="navbar-header">
+						      <a class="navbar-brand" href="#"><img src="http://linge669.3vcm.net/keti_img/logo.png"/></a>
+						    </div>
+						      <ul class="nav navbar-nav navbar-right">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">菜单<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">主要功能</a></li>
+										<li><a href="#">使用方法</a></li>
+										<li><a href="http://linge669.3vcm.net/gerenzhuye.html">关于</a></li>
+										<li><a href="#">待添加...</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+		</div>
+		<!--banner 部分-->
+		<div class="col-md-12 column">
+			<div class="carousel slide" id="carousel-466297">
+				<ol class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#carousel-466297">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-466297">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-466297">
+					</li>
+				</ol>
+			<div class="carousel-inner">
+				<div class="item active">
+					<img alt="" src="http://linge669.3vcm.net/keti_img/11.jpg" style="width: 100%;height: 300px;"/>
+					<div class="carousel-caption">
+						<h4>开封府一角</h4>
+						<p>开封府的帝王文化区在潜龙殿内供奉有宋太宗、宋钦宗、宋真宗三位皇帝，并且有“雪夜访赵普”和潜龙井等离奇的故事</p>
+					</div>
+				</div>
+					<div class="item">
+						<img alt="" src="http://linge669.3vcm.net/keti_img/10.jpg" style="width: 100%;height: 300px;"/>
+						<div class="carousel-caption">
+							<h4>西塘古镇的傍水人家</h4>
+							<p>作为承载着传统文化遗存的西塘，有着千年丰厚的民俗草根文化积淀。田歌是汉民族中的原生态民歌，是浙江省第一批非物质文化保护项目，也是世界非物质文化遗产。</p>
+						</div>
+					</div>
+				<div class="item">
+					<img alt="" src="http://linge669.3vcm.net/keti_img/3.jpg" style="width: 100%;height: 300px;"/>
+						<div class="carousel-caption">
+							<h4>国庆中国红东方明珠</h4>
+								<p>每年3月8日，东方明珠广播电视塔点亮粉红色灯光，呼吁全社会关爱妇女；每年4月2日的世界自闭症日，东方明珠广播电视塔都会亮起蓝色灯光，以这种形式呼唤社会关注自闭症患者</p>
+						</div>
+				</div>
+		</div> 
+				<a class="left carousel-control" href="#carousel-466297" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a> 
+				<a class="right carousel-control" href="#carousel-466297" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--内容部分-->
+	<div class="container">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<div class="title">
+					<span>记录生活　|</span>
+					
+				</div>
+			</div>
+			<div class="col-md-12 column">
+				<div class="row" id="diaryList">
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--添加新的旅行记录-->
+	<!-- Large modal -->
+		<div>
+		    <svg width="0" height="0">
+		        <defs>
+		            <filter id="goo">
+		                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+		                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix>
+		                <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
+		            </filter>
+		        </defs>
+		    </svg>
+		    <div class="aside-nav bounceInUp animated" id="aside-nav">
+		        <label for="" class="aside-menu">菜单</label>
+				<a href="#myHead" title="回到顶部" class="menu-item menu-first">Top</a>
+		        <a href="http://linge669.3vcm.net" title="个人主页" class="menu-item menu-second">MyPage</a>
+		        <a id="add" href="javascript:void(0)" title="添加新的日记" class="menu-item menu-third" data-toggle="modal" data-target=".bs-example-modal-lg">AddDiary</a>
+		        <a href="#footer" title="联系方式" class="menu-item menu-line menu-fourth">Connect</a> 
+		    </div>
+		</div>
+		
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      <form id="newDiary" class="form-horizontal" role="form">
+		      	<div class="form-group">
+					 <label for="diaryTitle" class="col-sm-2 control-label">标　题：</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control" id="diaryTitle" autocomplete="off" required="required"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="diaryContent" class="col-sm-2 control-label">内　容：</label>
+					<div class="col-sm-10">
+						<textarea id="diaryContent" class="form-control" required="required"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="imgurl" class="col-sm-2 control-label">图　片：</label>
+					<div class="col-sm-10">
+						<input type="file" id="imgurl" value="添加图片"  autocomplete="off" required="required"/>
+					</div>
+		      	</div>
+		      	<div class="form-group">
+		      		<label for="imgurl" class="col-sm-2 control-label">地　址：</label>
+					<div class="col-sm-10">
+						<input type="text" id="place" placeholder="详细地点" autocomplete="off" required="required"/>
+					</div>
+				</div>
+				<input id="save" type="button" class="col-sm-12" value="保存日记"/>
+		      </form>
+		    </div>
+		  </div>
+		</div>
+	
+	<!--留言部分-->
+	<div class="container">
+		<div class="row clearfix">
+			<div class="col-md-12 column">
+				<div class="title">
+					<span>给我留言　|</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row clearfix">
+				<form id="lyform" class="col-md-4">
+					<div class="form-group">
+					    <label for="ly_nickname">姓　名：</label>
+					    <input type="text" class="form-control" id="ly_nickname" placeholder="你的姓名" required="required" autocomplete="off">
+					  </div>
+					  <div class="form-group">
+					    <label for="ly_area">您的想法：</label>
+					    <textarea class="form-control" id="ly_area" required="required" autocomplete="off"></textarea>
+					  </div>
+					  <input id="ly_btn" type="button" class="col-sm-12" value="留言">
+					
+				</form>
+			<div id="lycontent" class="col-md-8">
+				<ul id="lylist" class="list-unstyled">
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--bottom部分-->
+	<div class="container">
+		<div class="row clearfix">
+			<div id="cloud" class="wrapper col-md-12">
+			    <p>我的关注</p>
+			    
+			    <div class="tagcloud fl">
+			      <a href="#" class="myBtn">文献综述</a>
+			      <a href="#" class="myBtn">对外投资</a>
+			      <a href="#" class="myBtn">机器人</a>
+			      <a href="#" class="myBtn">区块链</a>
+			      <a href="#" class="myBtn">科技创新</a>
+			      <a href="#" class="myBtn">计算机科学</a>
+			      <a href="#" class="myBtn">自动驾驶</a>
+			      <a href="#" class="myBtn">研究价值</a>
+			      <a href="#" class="myBtn">模式识别</a>
+			      <a href="#" class="myBtn">自然语言处理</a>
+			    </div>
+			    <div class="tagcloud fr">
+			      <a href="#" class="myBtn">大数据时代</a>
+			      <a href="#" class="myBtn">一带一路</a>
+			      <a href="#" class="myBtn">智能控制</a>
+			      <a href="#" class="myBtn">人工智能神经网络</a>
+			      <a href="#" class="myBtn">计算机科学</a>
+			      <a href="#" class="myBtn">自动驾驶</a>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<!--footer部分-->
+	<footer id="footer">	
+		<div class="container">
+			<div class="row clearfix">
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+    /*3D标签云*/
+	    tagcloud({
+	        selector: ".tagcloud",  //元素选择器
+	        fontsize: 16,       //基本字体大小, 单位px
+	        radius: 90,         //滚动半径, 单位px
+	        mspeed: "normal",   //滚动最大速度, 取值: slow, normal(默认), fast
+	        ispeed: "normal",   //滚动初速度, 取值: slow, normal(默认), fast
+	        direction: 135,     //初始滚动方向, 取值角度(顺时针360): 0对应top, 90对应left, 135对应right-bottom(默认)...
+	        keep: false          //鼠标移出组件后是否继续随鼠标滚动, 取值: false, true(默认) 对应 减速至初速度滚动, 随鼠标滚动
+	    });
+	</script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
